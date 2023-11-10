@@ -25,7 +25,7 @@ public class ConexionBaseDatos {
 			/**
 			 * Se realiza el registro del drive de Mysql
 			 */
-		    Class.forName("com.mysql.jdbc.Driver").newInstance();
+		    Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		    
 
 		} catch (Exception e) {
@@ -49,7 +49,7 @@ public class ConexionBaseDatos {
 			
 			con = DriverManager.getConnection(
 		            "jdbc:mysql://localhost/nominaamericana?"
-		            + "user=root&password=4m32017");
+		            + "user=root&password=4m32017&serverTimezone=UTC");
 
 		    // Otros y operaciones sobre la base de datos...
 
@@ -64,7 +64,7 @@ public class ConexionBaseDatos {
 	
 	public Connection obtenerConexionBDGeneral(){
 		try {
-		    Class.forName("com.mysql.jdbc.Driver").newInstance();
+		    Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		    
 
 		} catch (Exception e) {
@@ -80,7 +80,7 @@ public class ConexionBaseDatos {
 
 			con = DriverManager.getConnection(
 		            "jdbc:mysql://localhost/general?"
-		            + "user=root&password=4m32017");
+		            + "user=root&password=4m32017&serverTimezone=UTC");
 			
 			//con = DriverManager.getConnection(
 		    //        "jdbc:mysql://192.168.0.25/general?"
